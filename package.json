@@ -1,0 +1,20 @@
+{
+  "name": "loc-m4-1-mobile-benchmark",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vite build --base=./",
+    "preview": "vite preview --host 127.0.0.1 --port 4173"
+  },
+  "dependencies": {
+    "hash-wasm": "4.13.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.8"
+  }
+}
