@@ -59,7 +59,24 @@ To ensure reproducibility without recording personal identifiers or serial numbe
 
 ## 5. M4.1 Milestone Status
 
-- **Mobile performance measurements:** **Promising** (~41–47 ms unlock latency observed across profiles)
+- **Mobile performance measurements:** **Collected and arithmetically validated** (9 sessions; each 1 warm-up + 5 measured derivation/key-import samples)
 - **Independent cryptographic review:** **Pending**
 - **Production dependency lockfile:** **Pending**
 - **M4.2 encrypted persistence:** **Blocked** (IndexedDB persistence remains blocked until independent cryptographic review and production lockfile gates are satisfied)
+
+
+## 6. Interpretation & validation notes
+
+- The timed operation is **Argon2id v1.3 passphrase derivation plus Web Crypto import of a non-extractable AES-GCM key**. These figures are not full vault-unlock latency and do not include IndexedDB, record decryption, application rendering or user interaction.
+- All nine JSON files were checked against their five `samplesMs` values. Every stored `medianMs`, `minMs` and `maxMs` matches the values recalculated from its samples.
+- Average of the three session medians:
+  - Android Chrome: **43.57 ms** (reported as **43.6 ms**)
+  - iPhone / iPad Safari: **45.17 ms** (reported as **45.2 ms**)
+  - Other mobile browser: **43.07 ms** (reported as **43.1 ms**)
+  - All nine mobile sessions combined: **43.93 ms** (reported as **43.9 ms**)
+- Across all 45 mobile samples, the pooled median is **43.8 ms**, with a lowest sample of **41.0 ms** and highest sample of **55.6 ms**. Warm-up measurements are excluded from these aggregates.
+- The desktop reference of **48.9 ms** is the average of its three session medians (45.5, 53.8 and 47.3 ms). The desktop raw five-sample sessions are not stored in this directory, so the desktop comparison is a supplied reference rather than a revalidated pooled comparison.
+- Device descriptions are intentionally broad and do not include exact model identifiers, exact OS build numbers or exact browser build numbers. The "Other mobile browser" profile is not sufficiently identified to add a named browser/engine to the support matrix. These reports demonstrate measurements from the labelled browser profiles, but do not prove compatibility across all devices in those categories.
+- The mobile numbers are lower than the desktop reference in these observed sessions. This should not be interpreted as evidence that mobile devices are generally faster; the devices, OS versions and runtime configurations are not matched head-to-head.
+- The candidate Argon2id parameters remain unchanged: **19,456 KiB memory, 2 iterations, parallelism 1, 32-byte output**. Performance observations alone do not establish password-guessing resistance or security suitability.
+
