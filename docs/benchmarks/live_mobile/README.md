@@ -45,9 +45,9 @@ To ensure reproducibility without recording personal identifiers or serial numbe
 
 - **Comparison to Desktop Baseline:**
   - Desktop baseline (Windows development laptop): **~48.9 ms**
-  - Android Chrome average median: **43.6 ms** (~5.3 ms faster)
-  - iPhone Safari average median: **45.2 ms** (~3.7 ms faster)
-  - Other mobile average median: **43.1 ms** (~5.8 ms faster)
+  - Android Chrome average median: **43.6 ms** (~5.3 ms lower)
+  - iPhone Safari average median: **45.2 ms** (~3.7 ms lower)
+  - Other mobile average median: **43.1 ms** (~5.8 ms lower)
 
 ---
 
