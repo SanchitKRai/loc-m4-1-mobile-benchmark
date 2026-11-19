@@ -11,7 +11,7 @@ A temporary, standalone benchmark page for measuring the LOC M4.1 Argon2id candi
 - It does not call an application API or any external runtime endpoint.
 - It does not use cookies, localStorage, sessionStorage, IndexedDB, analytics, telemetry or background uploads.
 - Benchmark results are shown in the page and downloaded locally by an explicit user action. They are not transmitted.
-- The device label is optional. Use only a broad device/browser description; do not enter a name, serial number, phone number or other identifier.
+- The optional device label is selected from fixed broad device/browser categories. There is no free-text field and no device fingerprint or personal identifier is collected.
 - The benchmark measures Argon2id derivation plus non-extractable AES-GCM key import. It does not measure a full vault unlock, record decryption or storage performance.
 - Results are performance observations, not a security audit or production KDF approval.
 
