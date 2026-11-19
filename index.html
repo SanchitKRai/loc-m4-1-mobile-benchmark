@@ -28,7 +28,7 @@
       .card { margin-top: 20px; padding: 22px; border: 1px solid #dfe7dc; border-radius: 17px; background: white; box-shadow: 0 8px 28px rgba(35, 62, 43, .04); }
       .notice { padding: 14px; border: 1px solid #eadbb7; border-radius: 11px; background: #fff8e9; color: #6f5830; font-size: 12px; line-height: 1.7; }
       label { display: block; margin: 19px 0 7px; color: #405a47; font-size: 12px; font-weight: 750; }
-      input { width: 100%; min-height: 45px; padding: 0 12px; border: 1px solid #d9e3d6; border-radius: 9px; background: #fff; color: #253a2d; font: inherit; font-size: 13px; }
+      input, select { width: 100%; min-height: 45px; padding: 0 12px; border: 1px solid #d9e3d6; border-radius: 9px; background: #fff; color: #253a2d; font: inherit; font-size: 13px; }
       input:focus-visible, button:focus-visible { outline: 3px solid #93b69a; outline-offset: 2px; }
       .hint { margin: 7px 0 0; color: #839086; font-size: 11px; line-height: 1.6; }
       .actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 17px; }
@@ -71,13 +71,16 @@
         </div>
 
         <label for="device-label">Device label (optional)</label>
-        <input
-          id="device-label"
-          maxlength="80"
-          autocomplete="off"
-          placeholder="e.g. lower-end Android · Chrome"
-        />
-        <p class="hint">Use only a broad device/browser description. Do not enter your name, phone number, serial number or other identifying information.</p>
+        <select id="device-label" aria-label="Device and browser category">
+          <option value="">Not specified</option>
+          <option value="Windows laptop · Chrome">Windows laptop · Chrome</option>
+          <option value="Windows laptop · Edge">Windows laptop · Edge</option>
+          <option value="Android phone · Chrome">Android phone · Chrome</option>
+          <option value="iPhone or iPad · Safari">iPhone or iPad · Safari</option>
+          <option value="Other desktop or laptop">Other desktop or laptop</option>
+          <option value="Other mobile browser">Other mobile browser</option>
+        </select>
+        <p class="hint">Choose a broad category only. The page collects no free-text personal or device identifiers.</p>
 
         <div class="actions">
           <button id="run-benchmark" type="button">Run 5 measurements</button>
