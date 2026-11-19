@@ -1,0 +1,22 @@
+{
+  "benchmark": "LOC M4.1 Argon2id passphrase derivation",
+  "dataClassification": "Synthetic benchmark only; no health data or user credential",
+  "deviceLabel": "iPhone or iPad · Safari",
+  "generatedAt": "2026-11-19T05:53:30.946Z",
+  "interpretation": "Performance measurement only. Not a cryptographic audit or production KDF approval.",
+  "localOnly": true,
+  "maxMs": 51.0,
+  "medianMs": 45.1,
+  "minMs": 43.7,
+  "parameters": {
+    "algorithm": "Argon2id v1.3",
+    "hashLengthBytes": 32,
+    "iterations": 2,
+    "memorySizeKiB": 19456,
+    "parallelism": 1,
+    "saltBytes": 16
+  },
+  "repetitions": 5,
+  "samplesMs": [43.7, 44.0, 45.1, 47.3, 51.0],
+  "warmupMs": 46.5
+}

@@ -1,0 +1,22 @@
+{
+  "benchmark": "LOC M4.1 Argon2id passphrase derivation",
+  "dataClassification": "Synthetic benchmark only; no health data or user credential",
+  "deviceLabel": "Other mobile browser",
+  "generatedAt": "2026-11-19T05:53:39.407Z",
+  "interpretation": "Performance measurement only. Not a cryptographic audit or production KDF approval.",
+  "localOnly": true,
+  "maxMs": 45.1,
+  "medianMs": 43.6,
+  "minMs": 41.7,
+  "parameters": {
+    "algorithm": "Argon2id v1.3",
+    "hashLengthBytes": 32,
+    "iterations": 2,
+    "memorySizeKiB": 19456,
+    "parallelism": 1,
+    "saltBytes": 16
+  },
+  "repetitions": 5,
+  "samplesMs": [43.6, 43.1, 43.7, 41.7, 45.1],
+  "warmupMs": 42.8
+}
