@@ -1,0 +1,5 @@
+node_modules/
+dist/
+package-lock.json
+loc-m4-1-argon2id-benchmark*.json
+benchmark_run_*.json
